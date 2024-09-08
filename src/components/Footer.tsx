@@ -33,7 +33,9 @@ const Footer = () => {
           <FaInstagram className='h-7 w-7 hover:text-red-500 hover:scale-110 hover:shadow-md' />
         </a>
       </div>
-      <p>© 2024 Santosh Gurung. All rights reserved.</p>
+      <p className='text-sm md:text-lg'>
+        © 2024 Santosh Gurung. All rights reserved.
+      </p>
     </footer>
   );
 };
