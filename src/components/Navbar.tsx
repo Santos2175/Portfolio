@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-gradient-to-r from-gray-800 via-gray-900 to-black text-gray-200 p-4 sticky w-full top-0 left-0 h-18 py-auto'>
+    <nav className='bg-gradient-to-r from-gray-800 via-gray-900 to-black text-gray-200 p-4 sticky z-20 w-full top-0 left-0 h-18 py-auto'>
       <div className='max-w-7xl mx-auto flex justify-between items-center'>
         <h1 className='text-2xl font-bold hover:text-gray-400 pl-4'>
           <a href='#'>My Portfolio</a>
@@ -65,9 +65,16 @@ const Navbar = () => {
           </li>
           <li className='w-full'>
             <a
-              href='#about'
+              href='#home'
               className='block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2'>
               About
+            </a>
+          </li>
+          <li className='w-full'>
+            <a
+              href='#skills'
+              className='block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2'>
+              Skills
             </a>
           </li>
           <li className='w-full'>

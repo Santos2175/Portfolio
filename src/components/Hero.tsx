@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import pp from '../assets/img/profile1.jpg';
+import profile from '../assets/img/profile1.jpg';
 
 const Hero = () => {
   return (
@@ -26,19 +26,30 @@ const Hero = () => {
             <strong className='text-gray-500'>backend development</strong>,
             passionate about building dynamic web applications.
           </motion.p>
-          <motion.button
-            className='bg-blue-600 hover:bg-blue-700 text-gray-300 font-semibold py-2 px-6 rounded-lg'
+          {/* <motion.button
+            className='bg-blue-600 hover:bg-blue-700 text-gray-300 font-semibold w-56 py-2 px-6 rounded-lg'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}>
-            <a href='#connect'>Connect with me</a>
-          </motion.button>
+            <a href='#connect' className='hero-btn'>
+              Connect with me
+            </a>
+          </motion.button> */}
+
+          <motion.a
+            className='connect_btn'
+            href='#connect'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}>
+            Connect With me
+          </motion.a>
         </div>
 
         {/* Image Section */}
         <div className='flex justify-center md:justify-end md:mr-5'>
           <motion.img
-            src={pp}
+            src={profile}
             alt='Your profile'
             className='rounded-full w-60 h-60 md:w-72 md:h-72 object-cover shadow-2xl border-gray-800 border-4'
             initial={{ opacity: 0, scale: 0.8 }}

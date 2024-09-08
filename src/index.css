@@ -6,3 +6,28 @@ html {
   scroll-behavior: smooth;
   transition: all 0.5s;
 }
+
+.connect_btn {
+  color: rgb(59 130 246);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease, margin-left 0.3s ease;
+}
+
+.connect_btn::after {
+  content: '➯';
+  margin-left: 0.5rem;
+  font-weight: 700;
+  transition: margin-left 0.3s ease;
+}
+
+.connect_btn:hover::after {
+  margin-left: 2rem;
+}
+
+.connect_btn:hover,
+.connect_btn:hover::after {
+  color: rgb(16 185 129);
+}
