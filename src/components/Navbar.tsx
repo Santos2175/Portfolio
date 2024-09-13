@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false); // State for menu open/close
@@ -10,6 +10,21 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setIsOpen(false);
   };
+
+  //handle screen resize to close menu on larger screens
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <nav className='bg-gradient-to-r from-gray-800 via-gray-900 to-black text-gray-200 p-4 sticky z-20 w-full top-0 left-0 h-18 py-auto'>
@@ -59,7 +74,7 @@ const Navbar = () => {
         <ul
           className={`${
             isOpen ? 'translate-x-0 top-0 pt-10' : '-translate-x-full'
-          } md:flex md:space-x-8 items-center md:static fixed left-0 pr-4  h-full w-1/2 bg-gray-900 md:bg-transparent md:w-auto text-center md:translate-x-0 transform transition-transform duration-300 ease-in-out`}>
+          } md:flex md:space-x-8 items-center md:static fixed left-0 pr-4  h-full w-1/2 bg-gray-900 md:bg-transparent md:w-auto text-center md:translate-x-0 transform transition-transform duration-400 ease-in-out`}>
           <li className='w-full'>
             <a
               href='#home'
