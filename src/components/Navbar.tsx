@@ -7,6 +7,10 @@ const Navbar = () => {
     setIsOpen(!isOpen); // Toggle menu state
   };
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className='bg-gradient-to-r from-gray-800 via-gray-900 to-black text-gray-200 p-4 sticky z-20 w-full top-0 left-0 h-18 py-auto'>
       <div className='max-w-7xl mx-auto flex justify-between items-center'>
@@ -54,39 +58,42 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul
           className={`${
-            isOpen ? 'translate-x-0' : '-translate-x-full'
-          } md:flex md:space-x-8 items-center md:static fixed top-0 left-0 pr-4  h-full w-1/3 bg-gray-900 md:bg-transparent md:w-auto text-center md:translate-x-0 transform transition-transform duration-300 ease-in-out`}>
-          <li className='md:hidden'>
-            <button
-              onClick={toggleMenu}
-              className='text-white top-5 absolute right-4 hover:text-gray-400 text-3xl font-bold'>
-              &times;
-            </button>
-          </li>
+            isOpen ? 'translate-x-0 top-0 pt-10' : '-translate-x-full'
+          } md:flex md:space-x-8 items-center md:static fixed left-0 pr-4  h-full w-1/2 bg-gray-900 md:bg-transparent md:w-auto text-center md:translate-x-0 transform transition-transform duration-300 ease-in-out`}>
           <li className='w-full'>
             <a
               href='#home'
-              className='block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2'>
+              onClick={handleLinkClick}
+              className={`block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2 ${
+                isOpen ? 'border-b-[1px] border-gray-600' : ''
+              }`}>
               About
             </a>
           </li>
           <li className='w-full'>
             <a
               href='#skills'
-              className='block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2'>
+              onClick={handleLinkClick}
+              className={`block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2 ${
+                isOpen ? 'border-b-[1px] border-gray-600' : ''
+              }`}>
               Skills
             </a>
           </li>
           <li className='w-full'>
             <a
               href='#projects'
-              className='block text-lg py-6 hover:text-gray-400 md:py-0'>
+              onClick={handleLinkClick}
+              className={`block text-lg py-6 hover:text-gray-400 md:py-0 md:px-2 ${
+                isOpen ? 'border-b-[1px] border-gray-600' : ''
+              }`}>
               Projects
             </a>
           </li>
           <li className='w-full'>
             <a
               href='#contact'
+              onClick={handleLinkClick}
               className='block text-lg py-6 hover:text-gray-400 md:py-0'>
               Contact
             </a>
