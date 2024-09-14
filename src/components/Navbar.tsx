@@ -74,7 +74,7 @@ const Navbar = () => {
         <ul
           className={`${
             isOpen ? 'translate-x-0 top-0 pt-10' : '-translate-x-full'
-          } md:flex md:space-x-8 items-center md:static fixed left-0 pr-4  h-full w-1/2 bg-gray-900 md:bg-transparent md:w-auto text-center md:translate-x-0 transform transition-transform duration-400 ease-in-out`}>
+          } md:flex md:space-x-8 items-center md:static fixed left-0 pr-4  h-full w-1/2 bg-gray-900 md:bg-transparent md:w-auto text-center md:translate-x-0 transform transition-transform duration-300 ease-in-out`}>
           <li className='w-full'>
             <a
               href='#home'
