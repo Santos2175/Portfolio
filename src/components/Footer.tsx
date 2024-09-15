@@ -9,7 +9,7 @@ const Footer = () => {
           className='text-gray-300'
           target='_blank'
           rel='noopener noreferrer'>
-          <FaGithub className='h-7 w-7 hover:scale-110' />
+          <FaGithub className='h-7 w-7 hover:scale-110 hover:text-white' />
         </a>
         <a
           href='https://www.linkedin.com/in/santosh-gurung2175/'
