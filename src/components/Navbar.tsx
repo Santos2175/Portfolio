@@ -29,8 +29,8 @@ const Navbar = () => {
   return (
     <nav className='bg-gradient-to-r from-gray-800 via-gray-900 to-black text-gray-200 p-4 sticky z-20 w-full top-0 left-0 h-18 py-auto'>
       <div className='max-w-7xl mx-auto flex justify-between items-center'>
-        <h1 className='text-2xl font-bold hover:text-gray-400 pl-4'>
-          <a href='#'>My Portfolio</a>
+        <h1 className='text-2xl font-bold hover:text-gray-400 pl-4 font-serif tracking-wide'>
+          <a href='#'>SANTOSH</a>
         </h1>
 
         {/* Mobile Hamburger Menu */}
