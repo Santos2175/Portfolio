@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
 import profile from '../assets/img/profile1.jpg';
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   return (
     <section
       id='home'
@@ -22,9 +25,11 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}>
             A <span className='text-3xl font-semibold text-blue-500'>MERN</span>{' '}
-            stack enthusiast with a strong edge over{' '}
-            <strong className='text-gray-500'>backend development</strong>,
-            passionate about building dynamic web applications.
+            stack enthusiast with a strong interest over{' '}
+            <strong className='text-slate-400 font-bold text-xl tracking-wider'>
+              backend development
+            </strong>
+            , passionate about building dynamic web applications.
           </motion.p>
           {/* <motion.button
             className='bg-blue-600 hover:bg-blue-700 text-gray-300 font-semibold w-56 py-2 px-6 rounded-lg'
@@ -41,8 +46,22 @@ const Hero = () => {
             href='#connect'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 1 }}>
-            Connect With me
+            transition={{ delay: 0.8, duration: 1 }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}>
+            {isHovered ? (
+              'Connect with me'
+            ) : (
+              <Typewriter
+                words={['Connect with me']}
+                loop={false}
+                cursor
+                cursorStyle='_'
+                typeSpeed={100}
+                deleteSpeed={90}
+                delaySpeed={1000}
+              />
+            )}
           </motion.a>
         </div>
 
