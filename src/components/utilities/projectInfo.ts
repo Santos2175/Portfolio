@@ -4,6 +4,7 @@ import filteringSystem from '../../assets/img/filteringSystem.png';
 import shoesWebsite from '../../assets/img/shoesWebsite.png';
 import shoppingCart from '../../assets/img/shoppingCart.png';
 import hateTextDetection from '../../assets/img/hateTextDetection.png';
+import dynamicForm from '../../assets/img/dynamicForm.png';
 //structure of project
 
 interface Project {
@@ -63,5 +64,13 @@ export const projects: Project[] = [
     codeLink: 'https://github.com/Santos2175/toxicFrontend',
     liveLink: 'https://your-live-site.com/project-one',
     isLiveDisabled: true,
+  },
+  {
+    id: 7,
+    title: 'Dynamic Form',
+    image: dynamicForm,
+    codeLink: 'https://github.com/Santos2175/Dynamic-Form',
+    liveLink: 'dynamic-form-azure.vercel.app/',
+    isLiveDisabled: false,
   },
 ];
