@@ -42,7 +42,7 @@ const Hero = () => {
           </motion.button> */}
 
           <motion.a
-            className='connect_btn'
+            className='connect_btn '
             href='#connect'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -57,7 +57,7 @@ const Hero = () => {
                 loop={false}
                 cursor
                 cursorStyle='_'
-                typeSpeed={100}
+                typeSpeed={150}
                 deleteSpeed={90}
                 delaySpeed={1000}
               />
