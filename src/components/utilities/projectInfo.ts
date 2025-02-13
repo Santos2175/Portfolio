@@ -5,7 +5,7 @@ import shoesWebsite from '../../assets/img/shoesWebsite.png';
 import shoppingCart from '../../assets/img/shoppingCart.png';
 import hateTextDetection from '../../assets/img/hateTextDetection.png';
 import dynamicForm from '../../assets/img/dynamicForm.png';
-//structure of project
+import adminDashboard from '../../assets/img/adminDashboard.png';
 
 interface Project {
   id: number;
@@ -71,6 +71,14 @@ export const projects: Project[] = [
     image: dynamicForm,
     codeLink: 'https://github.com/Santos2175/Dynamic-Form',
     liveLink: 'dynamic-form-azure.vercel.app/',
+    isLiveDisabled: false,
+  },
+  {
+    id: 8,
+    title: 'Admin Dashboard',
+    image: adminDashboard,
+    codeLink: 'https://github.com/Santos2175/Admin-Dashboard',
+    liveLink: 'https://admin-dashboard-topaz-seven-38.vercel.app/',
     isLiveDisabled: false,
   },
 ];
